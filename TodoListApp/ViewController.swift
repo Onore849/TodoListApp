@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +20,24 @@ class ViewController: UIViewController {
 
 
 }
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Rowの選択を解除できる
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+}
+
 
