@@ -18,12 +18,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Tasks"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // setup
+        if !UserDefaults.bool(forKey: "setup") {
+            
+            
+            
+            
+        }
+        
         
         // Get all current saved tasks
         
     }
     
     
+    @IBAction func didtapAdd() {
+        
+        // 遷移させる
+        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        
+        vc.title = "New task"
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
 
 }

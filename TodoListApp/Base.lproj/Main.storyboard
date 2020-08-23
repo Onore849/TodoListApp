@@ -40,7 +40,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="20c-E5-8CG">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="hIz-Go-rMq"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="hIz-Go-rMq">
+                            <connections>
+                                <action selector="didtapAdd" destination="BYZ-38-t0r" id="iFM-8Z-vAA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7eD-4p-DBw" id="P61-qp-f45"/>
@@ -50,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Tasks View Controller-->
         <scene sceneID="PNa-JY-apZ">
             <objects>
-                <viewController id="tYI-x0-Tdu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="tYI-x0-Tdu" customClass="TasksViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oF5-NB-9Ei">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +86,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fnd-3W-3Tg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="aQ6-sm-Eaj">
+            <objects>
+                <viewController storyboardIdentifier="entry" id="SMp-fk-xAU" customClass="EntryViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3q-Yt-MBf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRq-HU-FGX">
+                                <rect key="frame" x="20" y="64" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="enR-eA-BFF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bRq-HU-FGX" firstAttribute="top" secondItem="6N3-tU-oL5" secondAttribute="top" constant="20" id="9Ix-rf-kzv"/>
+                            <constraint firstItem="6N3-tU-oL5" firstAttribute="trailing" secondItem="bRq-HU-FGX" secondAttribute="trailing" constant="20" id="hRZ-pG-QuQ"/>
+                            <constraint firstItem="bRq-HU-FGX" firstAttribute="leading" secondItem="6N3-tU-oL5" secondAttribute="leading" constant="20" id="myj-Eo-Udz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6N3-tU-oL5"/>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="bRq-HU-FGX" id="N6R-3t-UC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cY-XO-qKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="891"/>
         </scene>
     </scenes>
     <resources>

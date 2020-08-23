@@ -13,6 +13,8 @@
 		F8B04FA724F235BD0029D6C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B04FA524F235BD0029D6C7 /* Main.storyboard */; };
 		F8B04FA924F235BF0029D6C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B04FA824F235BF0029D6C7 /* Assets.xcassets */; };
 		F8B04FAC24F235BF0029D6C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B04FAA24F235BF0029D6C7 /* LaunchScreen.storyboard */; };
+		F8B04FB424F23AE00029D6C7 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B04FB324F23AE00029D6C7 /* EntryViewController.swift */; };
+		F8B04FB624F23AFF0029D6C7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B04FB524F23AFF0029D6C7 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F8B04FA824F235BF0029D6C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B04FAB24F235BF0029D6C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B04FAD24F235BF0029D6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B04FB324F23AE00029D6C7 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		F8B04FB524F23AFF0029D6C7 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				F8B04F9F24F235BD0029D6C7 /* AppDelegate.swift */,
 				F8B04FA124F235BD0029D6C7 /* SceneDelegate.swift */,
 				F8B04FA324F235BD0029D6C7 /* ViewController.swift */,
+				F8B04FB324F23AE00029D6C7 /* EntryViewController.swift */,
+				F8B04FB524F23AFF0029D6C7 /* TasksViewController.swift */,
 				F8B04FA524F235BD0029D6C7 /* Main.storyboard */,
 				F8B04FA824F235BF0029D6C7 /* Assets.xcassets */,
 				F8B04FAA24F235BF0029D6C7 /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B04FA424F235BD0029D6C7 /* ViewController.swift in Sources */,
+				F8B04FB424F23AE00029D6C7 /* EntryViewController.swift in Sources */,
+				F8B04FB624F23AFF0029D6C7 /* TasksViewController.swift in Sources */,
 				F8B04FA024F235BD0029D6C7 /* AppDelegate.swift in Sources */,
 				F8B04FA224F235BD0029D6C7 /* SceneDelegate.swift in Sources */,
 			);
