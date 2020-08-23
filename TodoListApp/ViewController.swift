@@ -95,17 +95,10 @@ extension ViewController: UITableViewDelegate {
         
         
         // 遷移させる
-        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "task") as! TasksViewController
         
         vc.title = "New task"
-        vc.update = {
-            
-            DispatchQueue.main.async {
-                
-                self.updateTasks()
-                
-            }
-        }
+        vc.task = tasks[indexPath.row]
         
         navigationController?.pushViewController(vc, animated: true)
         
