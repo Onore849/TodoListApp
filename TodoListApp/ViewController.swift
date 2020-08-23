@@ -24,15 +24,40 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         // setup
-        if !UserDefaults.bool(forKey: "setup") {
+        if !UserDefaults.standard.bool(forKey: "setup") {
             
-            
-            
+            UserDefaults.standard.set(true, forKey: "setup")
+            UserDefaults.standard.set(0, forKey: "count")
             
         }
         
         
         // Get all current saved tasks
+        updateTasks()
+        
+    }
+    
+    func updateTasks() {
+        
+        tasks.removeAll()
+        
+        guard let count = UserDefaults.standard.value(forKey: "count") as? Int else {
+            
+            return
+            
+        }
+        
+        for i in 0..<count {
+            
+            if let task = UserDefaults.standard.value(forKey: "task_\(i+1)") as? String {
+                
+                tasks.append(task)
+                
+            }
+            
+        }
+        
+        tableView.reloadData()
         
     }
     
@@ -43,6 +68,15 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
         
         vc.title = "New task"
+        vc.update = {
+            
+            DispatchQueue.main.async {
+                
+                self.updateTasks()
+                
+            }
+        }
+        
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -58,6 +92,23 @@ extension ViewController: UITableViewDelegate {
         
         // Rowの選択を解除できる
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        // 遷移させる
+        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        
+        vc.title = "New task"
+        vc.update = {
+            
+            DispatchQueue.main.async {
+                
+                self.updateTasks()
+                
+            }
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     
